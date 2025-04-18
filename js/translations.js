@@ -9,20 +9,15 @@ class TranslationManager {
             const response = await fetch(`./js/translations/${lang}.json`);
 
             if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+                console.error(`HTTP error! status: ${response.status}`);
+                return;
             }
 
             this.translations[lang] = await response.json();
 
             // Verify if loaded
         } catch (error) {
-            // Load default translations as a fallback
-            this.translations[lang] = {
-                home: {
-                    welcome: "Benvinguts al CTT La Torre",
-                    subtitle: "Si entra, és bona"
-                }
-            };
+            console.error('Error loading translations', error);
         }
     }
 

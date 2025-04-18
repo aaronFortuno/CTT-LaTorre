@@ -14,7 +14,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function changeLanguage(lang) {
-    translator.changeLang(lang);
+    translator.changeLang(lang)
+        .then(() => {
+            console.log('Language changed');
+        })
+        .catch(error => {
+            console.error('Error changing language', error);
+        });
 
     // Update current language text
     document.getElementById('current-lang').textContent = lang.toUpperCase();
