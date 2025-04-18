@@ -105,25 +105,3 @@ document.addEventListener('DOMContentLoaded', () => {
         bg.style.opacity = Math.max(0, Math.min(1, opacity));
     });
 });
-
-// document.addEventListener('scroll', function() {
-//     const hero = document.querySelector('.hero-section');
-//     const bg = document.querySelector('.hero-bg');
-//     if (!hero || !bg) return;
-//
-//     const rect = hero.getBoundingClientRect();
-//     const windowHeight = window.innerHeight;
-//
-//     // Calcula cuánto de la sección está visible
-//     const visible = Math.max(0, windowHeight - rect.top);
-//     const percent = Math.min(1, visible / hero.offsetHeight);
-//
-//     // Parallax: mueve la imagen hacia arriba al hacer scroll
-//     const translateY = (1 - percent) * 20; // Ajusta el 60 para más/menos movimiento
-//
-//     // Fade: reduce opacidad al hacer scroll
-//     const opacity = Math.max(0, percent);
-//
-//     bg.style.transform = `translateY(-${translateY}px)`;
-//     bg.style.opacity = opacity;
-// });

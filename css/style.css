@@ -104,7 +104,7 @@ body {
 }
 
 .dropdown-item {
-    color: var(--dropdown-text) !important; /* Forzar el color */
+    color: var(--dropdown-text) !important;
     background-color: transparent;
 }
 
