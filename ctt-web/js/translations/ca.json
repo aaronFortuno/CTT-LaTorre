@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "CTT La Torre",
+    "about": "Sobre nosaltres",
+    "team": "Equip",
+    "news": "Notícies",
+    "gallery": "Galeria",
+    "schedule": "Horari",
+    "contact": "Contacte",
+    "sponsors": "Patrocinadors",
+    "faq": "Preguntes més freqüents"
+  },
+  "home": {
+    "welcome": "Benvinguts al CTT La Torre",
+    "subtitle": "Si entra, és bona"
+  }
+}

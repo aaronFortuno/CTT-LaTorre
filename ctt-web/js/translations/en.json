@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "CTT La Torre",
+    "about": "About Us",
+    "team": "Team",
+    "news": "News",
+    "gallery": "Gallery",
+    "schedule": "Schedule",
+    "contact": "Contact",
+    "sponsors": "Sponsors",
+    "faq": "Frequently Asked Questions"
+  },
+  "home": {
+    "welcome": "Welcome to CTT La Torre",
+    "subtitle": "If it goes in, it's good"
+  }
+}
