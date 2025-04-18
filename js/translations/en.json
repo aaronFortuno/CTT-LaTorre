@@ -13,5 +13,9 @@
   "home": {
     "welcome": "Welcome to CTT La Torre",
     "subtitle": "If it goes in, it's good"
+  },
+  "about": {
+    "title": "About us",
+    "text": "We are the table tennis club of La Torre de Claramunt, a group passionate about sport, concentration, and precision. Our goal is to promote the practice of table tennis for all ages and skill levels, encouraging values such as teamwork, effort, and personal improvement."
   }
 }

@@ -13,5 +13,9 @@
   "home": {
     "welcome": "Benvinguts al CTT La Torre",
     "subtitle": "Si entra, és bona"
+  },
+  "about": {
+    "title": "Sobre nosaltres",
+    "text": "Som el club de tennis taula de la Torre de Claramunt, un grup apassionat per l’esport, la concentració i la precisió. El nostre objectiu és fomentar la pràctica del tennis taula a totes les edats i nivells, promovent valors com la companyonia, l’esforç i la superació personal."
   }
 }

@@ -13,5 +13,9 @@
   "home": {
     "welcome": "Bienvenidos a CTT La Torre",
     "subtitle": "Si entra, es buena"
+  },
+  "about": {
+    "title": "Sobre nosotros",
+    "text": "Somos el club de tenis de mesa de [Tu Pueblo], un grupo apasionado por el deporte, la concentración y la precisión. Nuestro objetivo es fomentar la práctica del tenis de mesa en todas las edades y niveles, promoviendo valores como el compañerismo, el esfuerzo y la superación personal."
   }
 }

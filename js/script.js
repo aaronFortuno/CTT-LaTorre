@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (typeof AOS !== 'undefined') {
         console.log('AOS init...');
         AOS.init({
-            duration: 800,
+            offset: 250,
+            duration: 1000,
             once: true
         });
     } else {
         console.error('AOS is not defined, skipping init');
     }
-
 });
 
 function changeLanguage(lang) {
