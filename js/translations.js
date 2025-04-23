@@ -5,28 +5,28 @@ class TranslationManager {
     }
 
     async loadTranslations(lang) {
-        try {
-            const response = await fetch(`./js/translations/${lang}.json`);
+        const response = await fetch(`./js/translations/${lang}.json`);
 
-            if (!response.ok) {
-                console.error(`HTTP error! status: ${response.status}`);
-                return;
-            }
-
-            this.translations[lang] = await response.json();
-
-            // Verify if loaded
-        } catch (error) {
-            console.error('Error loading translations', error);
+        if (!response.ok) {
+            throw new Error(`Failed to load translations for ${lang}. Status: ${response.status}`);
         }
+
+        this.translations[lang] = await response.json();
+        // Verify if loaded
     }
 
     async changeLang(lang) {
-        if (!this.translations[lang]) {
-            await this.loadTranslations(lang);
+        try {
+            if (!this.translations[lang]) {
+                await this.loadTranslations(lang);
+            }
+            this.currentLang = lang;
+            this.updatePageContent();
+        } catch (error) {
+            console.error('Error changing language:', error);
+                // TODO show message to user
+            throw error;
         }
-        this.currentLang = lang;
-        this.updatePageContent();
     }
 
     getText(key) {

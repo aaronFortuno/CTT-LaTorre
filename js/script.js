@@ -17,6 +17,7 @@ function changeLanguage(lang) {
     translator.changeLang(lang)
         .then(() => {
             console.log('Language changed');
+            renderTeamCarousel(); // Renderizar el carrusel después de cambiar el idioma
         })
         .catch(error => {
             console.error('Error changing language', error);
@@ -52,7 +53,57 @@ function toggleTheme() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function renderNewsGrid() {
+    const newsItems = translator.getText('news.items');
+    if (!newsItems) return;
+
+    const newsGrid = document.getElementById('newsGrid');
+    if (!newsGrid) return;
+
+    newsGrid.innerHTML = newsItems.map((item, idx) => `
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="news-card h-100 rounded">
+                <div class="news-card-img-wrapper">
+                    <img src="${item.image}" alt="${item.title}" class="news-card-img">
+                </div>
+                <div class="news-card-body p-3">
+                    <div class="news-card-date mb-2">${new Date(item.date).toLocaleDateString()}</div>
+                    <h5 class="news-card-title mb-2">${item.title}</h5>
+                    <p class="news-card-summary mb-3">${item.summary}</p>
+                    ${item.content ? `<button class="btn btn-sm btn-primary" data-news-idx="${idx}" data-i18n="news.readMore">Leer más</button>` : ''}
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+    // Añadir listeners a los botones "Leer más"
+    document.querySelectorAll('[data-news-idx]').forEach(btn => {
+        btn.addEventListener('click', function() {
+            showNewsModal(parseInt(this.getAttribute('data-news-idx')));
+        });
+    });
+}
+
+function showNewsModal(idx) {
+    const newsItems = translator.getText('news.items');
+    if (!newsItems || !newsItems[idx]) return;
+    const item = newsItems[idx];
+
+    document.getElementById('newsModalLabel').textContent = item.title;
+    document.getElementById('newsModalImg').src = item.image;
+    document.getElementById('newsModalImg').alt = item.title;
+    document.getElementById('newsModalDate').textContent = new Date(item.date).toLocaleDateString();
+    document.getElementById('newsModalContent').textContent = item.content || '';
+
+    // Mostrar el modal con Bootstrap 5
+    const modal = new bootstrap.Modal(document.getElementById('newsModal'));
+    modal.show();
+}
+
+
+document.addEventListener('DOMContentLoaded', async () => {
+    await translator.changeLang('ca');
+
     const themeToggle = document.getElementById('themeToggle');
     if (themeToggle) {
         themeToggle.addEventListener('click', toggleTheme);
@@ -87,6 +138,9 @@ document.addEventListener('DOMContentLoaded', () => {
             menu.classList.remove('showing');
         });
     });
+
+    // Load news
+    renderNewsGrid();
 
     window.addEventListener('scroll', function() {
         const hero = document.querySelector('.hero-section');

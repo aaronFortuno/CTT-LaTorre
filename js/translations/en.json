@@ -17,5 +17,28 @@
   "about": {
     "title": "About us",
     "text": "We are the table tennis club of La Torre de Claramunt, a group passionate about sport, concentration, and precision. Our goal is to promote the practice of table tennis for all ages and skill levels, encouraging values such as teamwork, effort, and personal improvement."
+  },
+  "team": {
+    "title": "El nostre equip",
+    "members": [
+      {
+        "name": "Nom Cognom",
+        "role": "Entrenador",
+        "bio": "Breu descripció o frase motivadora.",
+        "image": "img/team/member0.jpg"
+      },
+      {
+        "name": "Altre nom",
+        "role": "Jugador",
+        "bio": "Altra frase o descripció.",
+        "image": "img/team/member1.jpg"
+      },
+      {
+        "name": "Altre nom",
+        "role": "Jugador",
+        "bio": "Altra frase o descripció.",
+        "image": "img/team/member2.jpg"
+      }
+    ]
   }
 }

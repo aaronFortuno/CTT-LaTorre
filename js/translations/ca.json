@@ -17,5 +17,56 @@
   "about": {
     "title": "Sobre nosaltres",
     "text": "Som el club de tennis taula de la Torre de Claramunt, un grup apassionat per l’esport, la concentració i la precisió. El nostre objectiu és fomentar la pràctica del tennis taula a totes les edats i nivells, promovent valors com la companyonia, l’esforç i la superació personal."
+  },
+  "team": {
+    "title": "El nostre equip",
+    "members": [
+      {
+        "name": "Nom Cognom",
+        "role": "Entrenador",
+        "bio": "Breu descripció o frase motivadora.",
+        "image": "img/team/member0.jpg"
+      },
+      {
+        "name": "Altre nom",
+        "role": "Jugador",
+        "bio": "Altra frase o descripció.",
+        "image": "img/team/member1.jpg"
+      },
+      {
+        "name": "Altre nom",
+        "role": "Jugador",
+        "bio": "Altra frase o descripció.",
+        "image": "img/team/member2.jpg"
+      },
+      {
+        "name": "Altre nom",
+        "role": "Jugador",
+        "bio": "Altra frase o descripció.",
+        "image": "img/team/member1.jpg"
+      }
+    ]
+  },
+  "news": {
+    "title": "Noticias",
+    "readMore": "Leer más",
+    "items": [
+      {
+        "title": "¡Gran victoria en el torneo regional!",
+        "date": "2024-04-20",
+        "image": "img/news/news1.jpg",
+        "summary": "Nuestro equipo ha conseguido el primer puesto en el torneo regional de este fin de semana.",
+        "content": "Aquí puedes poner el texto completo de la noticia, con más detalles, resultados, fotos, etc.",
+        "link": "#"
+      },
+      {
+        "title": "Nueva equipación para la temporada",
+        "date": "2024-03-15",
+        "image": "img/news/news2.jpg",
+        "summary": "Presentamos la nueva equipación oficial del club para la temporada 2024.",
+        "content": "Aquí puedes poner el texto completo de la noticia, con más detalles, resultados, fotos, etc.",
+        "link": "#"
+      }
+    ]
   }
 }

@@ -17,5 +17,28 @@
   "about": {
     "title": "Sobre nosotros",
     "text": "Somos el club de tenis de mesa de [Tu Pueblo], un grupo apasionado por el deporte, la concentración y la precisión. Nuestro objetivo es fomentar la práctica del tenis de mesa en todas las edades y niveles, promoviendo valores como el compañerismo, el esfuerzo y la superación personal."
+  },
+  "team": {
+    "title": "El nostre equip",
+    "members": [
+      {
+        "name": "Nom Cognom",
+        "role": "Entrenador",
+        "bio": "Breu descripció o frase motivadora.",
+        "image": "img/team/member0.jpg"
+      },
+      {
+        "name": "Altre nom",
+        "role": "Jugador",
+        "bio": "Altra frase o descripció.",
+        "image": "img/team/member1.jpg"
+      },
+      {
+        "name": "Altre nom",
+        "role": "Jugador",
+        "bio": "Altra frase o descripció.",
+        "image": "img/team/member2.jpg"
+      }
+    ]
   }
 }

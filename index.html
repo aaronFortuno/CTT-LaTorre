@@ -100,7 +100,7 @@
                     <div class="col-lg-5 mb-4 mb-lg-0"
                          data-aos="fade-right"
                          data-aos-delay="200"
-                         data-aos-duration="1200"
+                         data-aos-duration="3000"
                          data-aos-offset="250">
                         <img src="img/about-placeholder.jpg" alt="Sobre el club" class="img-fluid rounded shadow">
                     </div>
@@ -117,17 +117,73 @@
             </div>
         </section>
 
-        <section id="team" class="container py-5">
-            <h2 data-i18n="nav.team"></h2>
-            <div class="row" id="team-members">
-                <!-- placeholder for team members -->
+        <section id="team" class="team-section py-5">
+            <div class="container">
+                <h2 class="mb-5 text-center" data-i18n="team.title">Nuestro equipo</h2>
+                <div class="row justify-content-center">
+
+                    <!-- Team member -->
+                    <div class="col-12 col-sm-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-card-modern rounded">
+                            <div class="team-card-header">
+                                <img src="img/team/member0.jpg" alt="Nom" class="team-card-img" data-i18n="team.members.0.image">
+                            </div>
+                            <div class="team-card-body">
+                                <h5 class="team-card-title" data-i18n="team.members.0.name"></h5>
+                                <p class="team-card-role" data-i18n="team.members.0.role"></p>
+                                <p class="team-card-bio" data-i18n="team.members.0.bio"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-card-modern rounded">
+                            <div class="team-card-header">
+                                <img src="img/team/member1.jpg" alt="Nom" class="team-card-img">
+                            </div>
+                            <div class="team-card-body">
+                                <h5 class="team-card-title" data-i18n="team.members.1.name"></h5>
+                                <p class="team-card-role" data-i18n="team.members.1.role"></p>
+                                <p class="team-card-bio" data-i18n="team.members.1.bio"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-card-modern rounded">
+                            <div class="team-card-header">
+                                <img src="img/team/member2.jpg" alt="Nom" class="team-card-img">
+                            </div>
+                            <div class="team-card-body">
+                                <h5 class="team-card-title" data-i18n="team.members.2.name"></h5>
+                                <p class="team-card-role" data-i18n="team.members.2.role"></p>
+                                <p class="team-card-bio" data-i18n="team.members.2.bio"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-card-modern rounded">
+                            <div class="team-card-header">
+                                <img src="img/team/member1.jpg" alt="Nom" class="team-card-img">
+                            </div>
+                            <div class="team-card-body">
+                                <h5 class="team-card-title" data-i18n="team.members.1.name"></h5>
+                                <p class="team-card-role" data-i18n="team.members.1.role"></p>
+                                <p class="team-card-bio" data-i18n="team.members.1.bio"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="news" class="container py-5">
-            <h2 data-i18n="nav.news"></h2>
-            <div id="news-list">
-                <!-- placeholder for news -->
+        <section id="news" class="news-section py-5">
+            <div class="container">
+                <h2 class="mb-5 text-center" data-i18n="news.title">Noticias</h2>
+                <div class="row" id="newsGrid">
+                    <!-- Las noticias se generarán aquí dinámicamente -->
+                </div>
             </div>
         </section>
 
@@ -165,6 +221,23 @@
                 <!-- placeholder for faq -->
             </div>
         </section>
+    </div>
+
+    <!-- read more modal -->
+    <div class="modal fade" id="newsModal" tabindex="-1" aria-labelledby="newsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered rounded">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newsModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="newsModalImg" src="" alt="" class="img-fluid mb-3" style="width:100%;object-fit:cover;aspect-ratio:16/9;">
+                    <div id="newsModalDate" class="mb-2 text-muted"></div>
+                    <div id="newsModalContent"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Bootstrap JS -->
